@@ -1,47 +1,95 @@
-\documentclass{report}
-
+\documentclass[a4paper, 10pt, onecolumn, openright, oneside]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
+\usepackage{soul}
 
 \title{RTFM}
 \author{Sevla}
-\date{July 30, 2019}
-
+\date{\today}
 \begin{document}
-
 \maketitle
 
 \part{Manual}
 
-\chapter{Administration}
+\chapter{System}
 
 \section{ls}
-
 \subsection{Synopsis}
-ls [OPTION]... [FILE]...
-
+\textbf{ls} [\ul{OPTION}]... [\ul{FILE}]...
 \subsection{Description}
-liste le contenu d'un répertoire (par ordre alphabétique par défaut)
+Liste le contenu d'un répertoire (par ordre alphabétique par défaut)
+\subsection{Options}
+\begin{description}
+\item[-a :] affiche également les fichiers cachés
+\item[-F :] affiche les dossiers avec un « / » a la fin et les raccourcis avec un « @ » a la fin
+\item[-d :] n'affiche pas le contenu des sous-répertoires
+\item[-h :] affiche les tailles d’une manière plus lisible pour l’humain
+\item[-t :] trie par date de dernière modification
+\item[-t :] affiche sous forme de liste détaillée
+\item[-r :] inverse l'ordre d'affichage
+\item[-i :] affiche l’inode de chaque fichiers
+\end{description}
 
+\section{cd}
+\subsection{Synopsis}
+\textbf{cd} [\ul{DEST}]
+\subsection{Description}
+Change de répertoire (par defaut \emph{home})
+
+\section{cp}
+\subsection{Synopsis}
+\textbf{cp} [\ul{OPTION}]... \ul{SOURCE}... \ul{DIRECTORY}|\ul{FILE}
+\subsection{Description}
+Copie fichiers et répertoires
+\subsection{Options}
+\begin{description}
+\item[-r :] récursivement
+\end{description}
+
+\section{mv}
+\subsection{Synopsis}
+\textbf{mv} [\ul{OPTION}]... \ul{SOURCE}... \ul{DIRECTORY}|\ul{FILE}
+\subsection{Description}
+Déplace (et renomme) des fichiers et répertoires
 \subsection{Options}
 
-\subsubsection{-a}
-affiche également les fichiers cachés
-\subsubsection{-F}
-affiche les dossiers avec un « / » a la fin et les raccourcis avec un « @ » a la fin
-\subsubsection{-d}
-n'affiche pas le contenu des sous-répertoires
-\subsubsection{-h}
-affiche les tailles d’une manière plus lisible pour l’humain
-\subsubsection{-t}
-trie par date de dernière modification
-\subsubsection{-l}
-affiche sous forme de liste détaillée
-\subsubsection{-r}
-inverse l'ordre d'affichage
-\subsubsection{-i}
-affiche l’inode de chaque fichiers
+\section{mkdir}
+\subsection{Synopsis}
+\textbf{mkdir} [\ul{OPTION}]... \ul{DIRECTORY}...
+\subsection{Description}
+Crée des répertoires
+\subsection{Options}
+\begin{description}
+\item[-p :] crée les répertoires parents si inexistants
+\end{description}
+
+\section{rmdir}
+\subsection{Synopsis}
+\textbf{rmdir} [\ul{OPTION}]... \ul{DIRECTORY}...
+\subsection{Description}
+Supprime des répertoires (vides)
+\subsection{Options}
+
+\section{touch}
+\subsection{Synopsis}
+\textbf{touch} [\ul{OPTION}]... \ul{FILE}...
+\subsection{Description}
+Met à jour la date de dernère modification des fichiers (les fichiers sont créé s'ils n'existent pas)
+\subsection{Options}
+
+\section{rm}
+\subsection{Synopsis}
+\textbf{rm} [\ul{OPTION}]... \ul{FILE}...
+\subsection{Description}
+Supprime des fichiers
+\subsection{Options}
+\begin{description}
+\item[-r :] récursivement
+\end{description}
+
+
+\chapter{Administration}
 
 \chapter{Network}
 
