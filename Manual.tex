@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 % \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \usepackage{soul}
 
 \title{RTFM}
@@ -9,7 +10,7 @@
 \date{\today}
 \begin{document}
 \maketitle
-
+\pagenumbering{roman}
 \tableofcontents
 
 \part{Manual}
@@ -96,5 +97,31 @@ Supprime des fichiers
 \chapter{Network}
 
 \part{Keyboard Shortcuts}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\begin{bf}Keyboard Shortcut\end{bf} & \begin{bf}Description\end{bf} \\
+\hline
+TAB & Auto completion \\
+TAB + TAB & List auto-completion possibilities \\
+ARROW UP & Previous command \\
+ARROW DOWN & Next command \\
+CTRL + R & Reverse index search \\
+CTRL + L & Clear \\
+CTRL + D & End Of File \\
+SHIFT + PgUp & Go up in the console messages \\
+SHIFT + PgDown & Go down in the console messages \\
+CTRL + A $\vert$ HOME & Bring the cursor to the extreme left \\
+CTRL + E $\vert$ END & Bring the cursor to the extreme right \\
+CTRL + U & Delete everyhing to the left of the cursor \\
+CTRL + K & Delete everyhing to the right of the cursor \\
+CTRL + W & Delete the fisrt word to the left of the cursor \\
+CTRL + Y & Past a word deleted with CTRL+U $\vert$ CTRL+K $\vert$ CTRL+W \\
+CTRL + C & Kill a runnig proscessus \\
+CTRL + Z & Stop a runnig proscessus \\
+\hline
+\end{tabular}
+\end{center}
 
 \end{document}
