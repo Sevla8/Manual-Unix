@@ -11,6 +11,7 @@
 \begin{document}
 \maketitle
 \pagenumbering{roman}
+\setcounter{tocdepth}{1}
 \tableofcontents
 
 \part{Manual}
@@ -92,6 +93,600 @@ Supprime des fichiers
 \end{description}
 
 
+
+-------------------------------------------------------------------------------------------
+
+
+
+    1. date : renvoie la date et l’heure
+
+    2. history : renvoi l'historique des commandes
+
+    3. whoami : renvoi le nom d'utilisateur qui est connecté
+
+    4. id user : renvoi des informations de groupes et d’utilisateurs
+
+    5. uname : renvoi l’identité du système
+
+    6. printenv HOME :  affiche la valeur de la variable d'environnement HOME
+
+    7. pwd : (Print Working Directory) affiche le nom du répertoire courant. 
+
+    8. ls [-option] [chemin] : liste le contenu d'un répertoire (par ordre alphabétique par défaut)
+-a : affiche également les fichiers cachés
+-F : affiche les dossiers avec un « / » a la fin et les raccourcis avec un « @ » a la fin
+-d : n'affiche pas le contenu des sous-répertoires
+-h : affiche les tailles d’une manière plus lisible pour l’humain
+-t : trie par date de dernière modification
+-l : affiche sous forme de liste détaillée
+-r : inverse l'ordre d'affichage
+-i : affiche l’inode de chaque fichiers
+
+    9. cd chemin : (Change directory) Accède au chemin. « . » est le dossier actuel. « .. » est le dossier parent. « ~ » est le dossier personnel.
+
+    10. du  [-option] : (Disk Usage) Renvoie la taille des dossiers du répertoire courant.
+-h : affiche les tailles d’une manière plus lisible pour l’humain
+-a : affiche également la taille des fichiers
+-s : affiche uniquement la taille du répertoire courant
+
+    11. cat [-option] fichier : affiche un fichier sur la sortie standard
+-n : affiche les numéros de lignes
+
+    12. less fichier : affiche un fichier sur la sortie standard page par page ou ligne par ligne
+SPACE : avancer d’une page
+ENTER avancer d’une ligne
+d : avance d’une demi page
+y : reculer d’une ligne
+u : reculer d’une page
+q : arrêter la lecture
+= : indiaue le pourcentage de lecture et le nombre de byte lus
+h : affiche l’aide
+/search : rechercher search
+n : prochaine occurrence 
+N précédente occurrence
+
+    13. head [-option] file : Affiche les premières lignes du fichier file
+-n x: affiche les x premières lignes
+
+------------------------------------------------------------------------------------------------------------------------
+
+    14. tail [-option] file : Affiche les dernières lignes du fichier file
+-n x: affiche les x dernière lignes
+-f : (follow) suivre la fin d’un fichier au fur et a mesure de son evolution
+
+------------------------------------------------------------------------------------------------------------------------
+
+    15. touch file : Change la date de dernière modification du fichier file. Si le fichier n’existe pas celui ci est crée.
+
+------------------------------------------------------------------------------------------------------------------------
+
+    16. mkdir [-option] repository : Cree le dossier repository.
+-p : crée tout les dossiers intermédiaires si repository est un chemin
+
+------------------------------------------------------------------------------------------------------------------------
+
+    17. cp [-option] file path/copy : (Copy) Copie un fichier en copy dans path
+-R, -r : copie un dossier et son contenu
+
+------------------------------------------------------------------------------------------------------------------------
+
+    18. mv  [-option] file path/name: (Move) Déplace un fichier en name dans path
+
+------------------------------------------------------------------------------------------------------------------------
+
+    19. rm [-option] file : (Remove) Supprime le fichier file
+-i : (interaction) demande une confirmation
+-f : (force) force la suppression
+-v: (verbose) affiche le log
+-r : supprimer un dossier et son contenu
+
+------------------------------------------------------------------------------------------------------------------------
+
+    20. rmdir dossier : Supprime le dossier dossier (vide). 
+
+------------------------------------------------------------------------------------------------------------------------
+
+    21. ln [-option] file1 file2 : Crée fichier2 qui est un lien physique vers fichier1
+-s : crée un lien symbolique
+
+------------------------------------------------------------------------------------------------------------------------
+
+    22. whereis : localise les fichiers binaires, sources et de manuel d'une commande. 
+
+------------------------------------------------------------------------------------------------------------------------
+
+    23. which : affiche le chemin complet du fichier passé en paramètre en recherchant celui-ci de la même manière que si la commande avait été utilisée dans un interpréteur de commande. which cherche le fichier dans la liste des répertoires contenu dans la variable d'environnement PATH
+
+------------------------------------------------------------------------------------------------------------------------
+
+    24. find : cherche des fichiers dans un ou plusieurs répertoires selon des critères définis par l'utilisateur. 
+Par défaut, find retourne tous les fichiers contenus dans l'arborescence du répertoire courant. find permet aussi d'exécuter une action sur chaque fichier retrouvé, ce qui en fait un outil très puissant. Contrairement à locate ou d'autres commandes similaires, find ne fait pas appel à un index pour stocker les informations à rechercher. 
+
+------------------------------------------------------------------------------------------------------------------------
+
+    25. locate : permet de localiser un fichier. À la différence des autres méthodes de recherche, locate ne cherche pas dans l'arborescence des répertoires les fichiers demandés mais dans une base de donnée mise régulièrement à jour (au moyen de la commande updatedb, que l'on automatise, si ce n'est pas déjà le cas, au moyen de cron). Cette base de données contient les références vers les fichiers contenus dans les répertoires du système. 
+L'avantage de cette méthode repose sur la grande rapidité d'une telle recherche. En revanche, tout ajout, suppression ou déplacement d'un fichier survenus entre deux mises à jour ne sera pas répercuté dans la base de données à moins d'une mise à jour manuelle
+
+------------------------------------------------------------------------------------------------------------------------
+
+    26. useradd [options] user1: crée un nouvel utilisateur user1
+--home /home/rep/ : détermine /home/rep/ comme emplacement du répertoire domicile
+-b /home/ : détermine /home/user1/ comme emplacement du répertoire domicile
+--create-home : crée le répertoire domicile 
+-m :                                ''               ''
+--groups G1,G2 : affecte user1 aux groupes secondaires G1 et G2 
+-G :                                        ''                        ''
+--gid G3 : affecte user1 au groupe principale G3 
+-g :                   ''                           ''
+
+------------------------------------------------------------------------------------------------------------------------
+
+    27. su user : prend l'identiter de user
+
+------------------------------------------------------------------------------------------------------------------------
+
+    28. umask : Renvoie la valeur du masque de création de fichier par défaut
+droits maximums pour un fichier : 666
+droits maximums pour un répertoire : 777,
+
+------------------------------------------------------------------------------------------------------------------------
+
+    29. chmod : change les permissions d'un fichier/répertoire
+u : user
+g : group
+o : other
+a : all
+-R : de manière récursive --» agit sur les sous-répertoires et sous-fichier du répertoire
+
+chmod abc file : donne les droits abc au fichier file
+
+------------------------------------------------------------------------------------------------------------------------
+
+    30. passwd user: définir un nouveau mot de passe pour user
+-d : supprime le mot de passe
+
+------------------------------------------------------------------------------------------------------------------------
+
+    31. usermod [-option] user: modifie les caractéristiques de utilisateur
+--login newlogin : change son login en newlogin
+-l → pareil 
+--gid group : change son groupe en group
+-g → pareil
+-G : grp1,grp2,… les groupes de user seront grp1, grp2, …
+-a : permet d’ajouter plutot des groupes que de les remplacer 
+
+------------------------------------------------------------------------------------------------------------------------
+
+    32. tar [option] [répertoire] 
+-x : décompresser une archive
+-c : compresser un répertoire
+-v : active le mode « verbeux » (bavard, affiche ce qu'il fait). 
+-f :utilise le fichier donné en paramètre
+
+------------------------------------------------------------------------------------------------------------------------
+
+    33. shopt [-pqsu] [-o] [otion …]
+-p : affiche une liste de toute les options définies
+-q : Supprime la sortie normale; le statut de retour indique si l'option est défini ou non. Si plusieurs options sont donnés avec -q, le statut de retour est zéro si toutes les options sont activées; non nul autrement.
+-s : active chaque options
+-u : désactive chaque options
+-o : Restreint les valeurs de l'option pour être celles définies pour l'option -o de Set Builtin (voir 
+The Set Builtin).
+
+------------------------------------------------------------------------------------------------------------------------
+
+    34. echo [text]: renvoi la ligne de texte text.
+
+------------------------------------------------------------------------------------------------------------------------
+
+    35. [cmd1] ; … ; [cmdn] : exécute cmd1 puis … puis cmdn.
+
+[cmd1] && … && [cmd2] : éxecute cmd(i) puis cmd(i+1) si et seulement si ( $? = 0 ).
+
+[cmd1] || … || [cmdn] : exécute cmd(i) puis cmd(i+1) si et seulement si ( $? ≠ 0 ).
+
+[cmd1] … [cmdn] > [fichier] : redirige les sorties éxecutables de cmd, … , cmdn dans fichier en écrasant fichier.
+
+[cmd1] … [cmdn] >> [fichier] : redirige les sorties éxecutables de cmd, … , cmdn dans fichier en les ajoutant à fichier.
+
+[cmd1] … [cmdn] 2> [fichier] : redirige les sorties non éxecutables de cmd, … , cmdn dans fichier en écrasant fichier.
+
+[cmd1] … [cmdn] 2>> [fichier] : redirige les sorties non éxecutables de cmd, … , cmdn dans fichier en les ajoutant à fichier.
+
+[cmd1] … [cmdn] > [fichier] 2>&1 : redirige toutes les sorties (éxecutables ou non) de cmd, … , cmdn dans fichier en écrasant fichier.
+
+[cmd1] … [cmdn] >> [fichier] 2>&1 : redirige toutes les sorties (éxecutables ou non) de cmd, … , cmdn dans fichier en les ajoutant à fichier.
+
+[cmd] < [fichier] : dirige le fichier fichier vers l'entrée de la commande cmd.
+
+[cmd] <<  keyword : dirige l’entrée standard vers l’entrée de la commande. S’arrête quand rencontre keyword
+
+[cmd1] | [cmd2] : exécute la commande cmd2 . Si cmd2 a besoin d'une entrée alors la sortie de la commande cmd1 est envoyé vers l'entrée de la commande cmd2.
+
+------------------------------------------------------------------------------------------------------------------------
+
+    36. wc [file] [fichier] : renvoi le nombre de lignes, de mots et de caratères de ficher.
+       -l : compte le nombre de ligne
+       -w : compte le nombre de mots
+       -c : compte le nombre d’octets
+       -m:compte le nombre de charatères
+
+------------------------------------------------------------------------------------------------------------------------
+
+    37. expr length string : renvoi la longueur de string.
+
+expr substr string pos length : renvoi la chaine de caractère de longueur length commencant à la position pos de string.
+
+expr index string chars : renvoi la position de chars dans string ou 0 si absent de string.
+
+------------------------------------------------------------------------------------------------------------------------
+
+    38. var=val : affecte la valeur val à la variable var.
+
+$var : renvoi la valeure de la variable var.
+
+echo $var : affiche la valeure de la variable var.
+
+set : affiche l’ensemble des variables définies dans le shell.
+
+unset var : supprime la variale var.
+
+------------------------------------------------------------------------------------------------------------------------
+
+    39. (B#x) : x dans la base B.
+
+------------------------------------------------------------------------------------------------------------------------
+
+    40. sort [option] fichier : affiche le fichier fichier trié. Le trie est croissant.
+-b : ignore les espaces et les tabulations en début de champ.
+-d : tri sur les caractères alphanumériques (caractères, chiffres et espace) uniquement.
+-r : inverse l'ordre de tri.
+-f : pas de différence entre minuscule et majuscule.
+-t x : Le caractère x est considéré comme séparateur de champ (séparateur par défault = espace).
+-u : supprime les lignes doublons.
+-n : trie sur des chiffres uniquement.
+-+N : trie à partir du séparateur N.
+--N : trie jusqu'au séparateur N.
+-o file : enregistre le résultat dans un fichier
+-R : trie aléatoire
+
+------------------------------------------------------------------------------------------------------------------------
+
+    41. hexdump [-option] file : convertit les charactères de file
+-b : affiche le fichier en octal
+-C : affiche le fichier en héxadécimal
+
+------------------------------------------------------------------------------------------------------------------------
+
+    42. echo [-option] {text}
+-e : interprète les caractères échapés par un backslash
+-n : n'affiche pas de retour à la ligne en sortie
+interprétations ave “-e” :
+→ \0NNN  byte with octal value NNN (1 to 3 digits)
+→ \xHH   byte with hexadecimal value HH (1 to 2 digits)
+
+------------------------------------------------------------------------------------------------------------------------
+
+    43. sed [-option] [script] [fichier] 
+-n : écrit seulement les lignes spécifiées (par l'option /p) sur la sortie standard 
+-r : utilisation de regex
+-e 'script' : script en ligne de commande . 
+-f [script] : script à partir d'un fichier.
+
+: toutes les lignes 
+num : à ligne num (la dernière ligne est référencée par $)
+num1,num2 : les lignes entre les lignes num1 et num2
+/RE/ : les lignes correspondant à l'expression régulière RE 
+/RE1/,/RE2/ : les lignes entre la première ligne correspondant à l'expression régulièreRE1 et la première ligne correspondant à l'expression régulière RE2
+
+a\texte : insère le texte après la ligne 
+i\texte : insère le texte avant la ligne 
+d : supprime ligne
+p : affiche la ligne (utiliser avec -n)
+p <=> ! d
+ex : -ne '/regexp/p'  <=>  -e '/regexp/! d' 
+[/regexp/] s/search/replace/g : substitue toutes les occurrences de search par replace, où se trouve 				 regexp
+[/regexp/] y/list1/list2/ tranliteration des éléments de list1 en les éléments de list2, où se trouve 				 regexp
+G : insère ligne vide
+w NewFile : enregistre en créer un nouveau fichier NewFile
+
+------------------------------------------------------------------------------------------------------------------------
+
+    44. awk [-option] pattern '{action}' fichier 
+-F''x'' : utilise x comme séparateur de champs
+-v variable : définit la variable variable
+-f script : exécute les commandes de script
+
+Un enregistrement est : 
+une chaine de caractères séparée par un retour chariot, en général une ligne. 
+Un champs est : 
+une chaine de caractères separée par un espace (ou par le caractère specifié par l'option -F), en générale un mot. 
+Accès aux champs : 
+	$1, $2, ... $NF. $0 correspond à l'enregistrement complet. La variable NF contient le 	nombre de champs de l'enregistrement courant, la variable $NF correspond donc au dernier 	champs. 
+
+FS : separateur de champs en entrée 
+RS : separateur d'enregistrement en entrée 
+NF : nombre de champs de l'enregistrement courant 
+NR : nombre d'enregistrements deja lu
+FNR : Nombre d'enregistrements du fichier 
+
+BEGIN {action} : exécute l'action seulement au début
+END {action} : exécute l'action seulement à la fin
+
+------------------------------------------------------------------------------------------------------------------------
+
+    45. ps : process snapshot : affiche l'état des processus en cours.
+--user ID : sélectionne par ID
+--tty tty :sélectionne par tty
+--pid : sélectionne par PID
+--ppid : sélectionne par PPID
+-C cmd : sélectionne par nom de commande
+o list1,list2,list3 : affiche les processus selon le format demandé (avec list1= ppid, list2 = tty … par exemple)
+-A : (autres) présente également les processus des  autres utilisateurs. → -e
+x : affiche  les  processus  qui n'ont pas de terminal de contrôle.
+F : (forêt)  affiche les arbres généalogiques des processus.
+-H : affiche sous forme hiérarchique 
+-u processus lancés par l’utilisateur
+-f : full format
+-a : tout les processus excepté ceux non associé a un terminal
+
+------------------------------------------------------------------------------------------------------------------------
+
+    46. find [-option] repository : recherche des fichiers/répertoires dans repository selon -option
+[critère1]  [critère2] : critère1 et critère2
+[critère1] -o [critère2] : critère1 ou critère2
+![critère] : non critère
+-type : d = répertoire ; f = fichier
+-name : recherche sur le nom
+-size : par bloc ; c = caractère/octet/byte
+-newer fichier : date de modification postérieur à fichier
+-mtime : date de dernière modification
+-atime : date de dernier accès
+-ctime : date de dernier changement de statut
+-perm mode : -mode = au moins les permissions ; +mode = certaine permissions ; 
+	mode = exact permissions ; 	/ : au moins une des perms, 	- : au moins les perms
+-exec cmd : éxécute cmd pour les fichiers/répertoires trouvés
+-execdir cmd : comme exec à la différence que le répertoire où s’effectuera la commande sera celui où find a matché. 
+-ok : comme exec mais interroge l'utilisateur avant d’exécuter la commande pour chaque fichier trouvé
+-maxdepth : profondeur de recherche ( similaire mindepth )
+-atime : date de dernier accès en lecture
+-quit : arrête le processus des qu'un résultat est trouver. Ne l'affiche pas si on ne met pas -print -quit 
+
+------------------------------------------------------------------------------------------------------------------------
+
+    47. grep [-option] 'pattern' [file] :
+-G : interprète motif comme une regex simple. Par défaut.
+-E : interprète motif comme une regex étandue → egrep
+-F : interprète motif comme une liste de chaînes figées, séparées par des Sauts de Lignes (NewLine). La correspondance est faite avec n'importe laquelle de ces chaînes.
+
+*Dans  les  expressions  régulières  simples, les méta-caractères ?, +, {, |, (, et ) perdent  leurs  significations spéciales, il faut utiliser à la place leurs versions avec backSlash \?, \+, \{, \|, \(, et \).
+*Dans grep -E  le  méta-caractère  {  perd  sa  signification spéciale, il faut utiliser \{ à la place.
+
+-i : ignorer différence majuscule/minuscule
+-v : sélectionne les lignes ne correspondants pas à motif
+-w : sélectionne les lignes dont le motif forme un mot complet
+-c : affiche un compte des lignes correspondantes
+-n : numérote les lignes
+-l : affiche le nom des fichiers contenant des lignes correspondantes
+-L : affiche le nom des fichiers contenant des lignes non correspondantes
+-r : cherche dans les fichier du répertoire et des sous répertoires de manière récursive → rgrep
+-I : exclu les fichiers binaires
+
+------------------------------------------------------------------------------------------------------------------------
+
+    48. seq [n0] [i] n : retourne les entiers de n0 jusqu'à n en incrémentant de i
+n0 par défaut 1
+i par défaut 1
+
+------------------------------------------------------------------------------------------------------------------------
+
+    49. read [-option] var1 var2 … varn : lit sur l'entrée standard des valeurs jusqu'à rencontrer le délimiteur. Range ces valeurs dans var1, var2, …, varn. Les valeurs sont séparées par les caractères contenus dans $IFS. La dernière variable prend le reste des valeurs s'il en reste.
+-d delim : change le délimiteur. Par défaut \n    	!= séparateur !
+-n m : lit m caractères 
+-N n : lit n caractères, ignore les séparateurs
+séparateurs : par défaut IFS=$' \t\n'  → espace, tabulation, retour chariot 
+-p message : message de prompte 
+-t time : timout time
+-s : masque les caractères
+
+------------------------------------------------------------------------------------------------------------------------
+
+    50. git : logiciel de gestion de version
+git init : initialise un repository git vide
+git status : renvoie l'état du repository
+git log : affiche la liste des commits
+git log --oneline : comme git log mais sur une ligne
+git add [files] : ajoute files à la liste des commits
+git commit -m ''message'' : commit les fichiers qui sont dans la liste des commits avec le message message
+git checkout [id] : revient au commit correspondant à id
+git remote add origin [url] : définit l'adresse où l'on push
+git push --set-upstream origin master : associe master avec origin
+git push : envoie les commit dans origin
+git pull : récupère les commit de origin
+git remote : liste les dépots distants
+git remote -v : comme git remote avec les url
+git clone [link] : clone le repositry
+git branch newbranch : crée une nouvelle branche newbranch
+git merge branch : incorpore les changements de branch à la branche actuelle
+
+------------------------------------------------------------------------------------------------------------------------
+
+    51. ssh-keygen -t rsa -C "votre email@mondomaine" : créer une clée ssh
+
+
+
+sudo  cmd : (Substitute User Do) exécute la commande cmd en root
+
+su user : changer d’utilisateur, sans nom d’utilisateur indiqué permet de passer en root
+
+adduser user : ajouter l’utilisateur user de manière interactive
+
+deluser [-option] user : supprime le compte de user
+--remove-home : supprime également le répertoire personnel
+
+addgroup name : crée le groupe name
+
+delgroup name : supprime le groupe name
+
+chown user file : change le propriétaire du fichier file et le met à user
+chown user:gourp file : change le propriétaire du fichier file et le met à user et le groupe du fichier file et le met à group
+-R : de manière récurssive pour les sous dossiers
+
+chgrp group file : change le group du fichier file et le met à group
+
+apt-get update : mettre à jour le cache des paquets
+apt-cache search name : rechercher le paquet name
+apt-cache show paquet : avoir une description du paquet paquet
+apt-get install paquet : installe le paquet paquet
+apt-get remove paquet : désinstalle le paquet paquet
+apt-get autoremove paquet : paquet : désinstalle le paquet et ses dépendances non utilisées
+apt-get upgrade : met à jours tous les paquets installés
+apt-get autoremove –purge : comme  autoremove mais supprime en plus les fichiers de configuration
+
+man cmd : affiche la page manuelle de cmd
+apropos name : affiches les commandes en rapport avec name
+whatis cmd : affiche la description de la commande cmd
+
+uniq [option] file [output] : supprime les lignes identiques et les écrit dans output si spécifié, sur la sortie standard sinon
+-c : affiche le nombre d’occurrences
+-d : affiche uniquement les doublons
+-u : affiche unique ment les ligne uniques
+
+cut [option] file :
+-c -nb : du 1er charactère au nb ème  
+-c nb- : du nb ème au dernier charatère
+-d delim : utilise delim comme délimiteur. Default → tab
+-f nb : indique le numéro du champ à couper
+
+uptime : affiche la durée de fonctionnement de l’ordinateur ainsi que sa charge moyenne
+
+tload : affiche graphiquement la charge de l’ordinateur
+
+who : affiche les personnes connectées sur la machine
+
+w : d\te + uptime + who
+
+top : affiches les processus de manière dynamique
+
+kill PID : arrêter le processus correspondant à PID
+-9 : force brute
+
+killall name : arrête tout les processus name
+
+halt, poweroff, reboot, shutdow : arrête, met hors tension, redémarre la machine
+
+cmd& : exécute cmd en arrière plan
+
+nohup cmd : détache cmd de la console et ses sorties sont redirigées vers un fichier nohup.out
+
+bg : background → met le processus en arrière plan
+
+jobs : liste les processus en arrière plan
+
+fg %n : renvoie le processus n en premier plan
+
+screen : émulateur de terminaux
+
+at : exécute une commande ultérieurement
+atq : liste les jobs en attente
+atrm n : supprime le job n
+
+sleep n : fait une pause de n secondes
+
+crontab [option] : modifier la liste des programmes à exécuter ultérieurement
+-l : afficher la liste
+-e : éditer la liste
+-r : vider la liste
+
+tar [option] archive dossier : archive dossier en archive
+-c : créer l’archive
+-v : verbose
+-f : assembler l’archive dans un fichier
+-t : afficher le contenue de l’archive 
+-r : rajouter un fichier
+-x : extraire les fichiers de l’archive
+-z : compresse(c)/décompresse(x) en gzip
+-j : compresse(c)/décompresse(x) en bzip2
+
+gzip file.tar : compresse file.tar en file.tar.gz
+gunzip file.tar.gz : décompresse file.tar.gz en file.tar
+
+bzip2 file.tar : compresse file.tar en file.tar.bz2
+bunzip2 file.tar.bz2 : décompresse file.tar.bz2 en file.tar
+
+zcat : cat un fichier gzippé
+zmore : more un fichier gzippé
+zless : less un fichier gzippé 
+
+unzip [option] file.zip : décompresse file.zip
+-l : affiche sans décompresser
+
+unrar [option] file.rar :décompresse file.rar
+e : décompresser file.rar
+l:afficher sans décompresser
+
+ssh login@addr : se connecter au serveur addr
+
+wget [option] http/ftp_addr : télécharge le fichier pointé par le lien
+-c : reprendre un téléchargement arrêté
+--background : téléchargement en arrière plan
+
+scp login@IP:path_src login@IP:path_dst : copie de fichier d’une machine à une autre
+
+ftp host : se connecter à un serveur ftp
+
+!cmd : exécuter cmd sur sa machine lorsque l’on est connecté à un serveur ftp
+
+get file : télécharger un fichier sur un serveur ftp
+put file : déposer un fichier sur un serveur ftp
+
+sftp login@IP : se connecter à un serveur sftp
+
+rsync [option] login@IP:path_src login@IP:path_dst : effectue un sauvegarde incrémentielle de src vers dst
+-a : conserve toutes les informations
+-r : copie également les sous dossiers
+-v : verbose
+--delete : supprime les fichiers de dst supprimés dans src
+--backups-dir=path : déplace les fichiers supprimés vers path
+--exclude=pattern : exclu les fichiers matchant avec pattern
+
+host IP/domaine : donne la correspondance domaine/IP
+
+whois Ip/domaine : affiche les informations sur l’IP/domaine
+
+netstat [option] : affiche des information réseau
+-i : affiche des statistiques sur les interfaces réseau
+-a : afficher toutes les connexions quelque soit leur état
+-u : afficher les connexions UDP
+-t : afficher les connexions TCP
+ 
+iptables [option] : pare-feu
+--line-numbers : numérote les règles
+-A chain : ajoute une règle en fin de liste pour la chain indiquée (INPUT ou OUTPUT, par exemple).
+-D chain rulenum : supprime la règle n° rulenum pour la chain indiquée.
+-I chain rulenum : insère une règle au milieu de la liste à la position indiquée par rulenum. Si vous n'indiquez pas de position rulenum, la règle sera insérée en premier, tout en haut dans la liste.
+-R chain rulenum : remplace la règle n° rulenum dans la chain indiquée.
+-L : liste les règles (nous l'avons déjà vu).
+-F chain : vide toutes les règles de la chain indiquée. Cela revient à supprimer toutes les règles une par une pour cette chain.
+-P chain regle : modifie la règle par défaut pour la chain. Cela permet de dire, par exemple, que par défaut tous les ports sont fermés, sauf ceux que l'on a indiqués dans les règles.
+dig
+
+netcat
+
+who : indique qui est loggé
+
+at :
+
+fork
+
+waitpid
+
+execl, execlp, execv, execvp, ...
+
+
+
+-------------------------------------------------------------------------------------------
+
 \chapter{Administration}
 
 \chapter{Network}
@@ -99,7 +694,7 @@ Supprime des fichiers
 \part{Keyboard Shortcuts}
 
 \begin{center}
-\begin{tabular}{|c|c|}
+\begin{tabular}{|l|l|}
 \hline
 \begin{bf}Keyboard Shortcut\end{bf} & \begin{bf}Description\end{bf} \\
 \hline
