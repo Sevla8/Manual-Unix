@@ -15,87 +15,194 @@
 \tableofcontents
 
 \part{Manual}
-
-\chapter{System}
-
-\section{ls}
-\subsection{Synopsis}
-\textbf{ls} [\ul{OPTION}]... [\ul{FILE}]...
-\subsection{Description}
-Liste le contenu d'un répertoire (par ordre alphabétique par défaut)
-\subsection{Options}
-\begin{description}
-\item[-a :] affiche également les fichiers cachés
-\item[-F :] affiche les dossiers avec un « / » a la fin et les raccourcis avec un « @ » a la fin
-\item[-d :] n'affiche pas le contenu des sous-répertoires
-\item[-h :] affiche les tailles d’une manière plus lisible pour l’humain
-\item[-t :] trie par date de dernière modification
-\item[-t :] affiche sous forme de liste détaillée
-\item[-r :] inverse l'ordre d'affichage
-\item[-i :] affiche l’inode de chaque fichiers
-\end{description}
-
-\section{cd}
-\subsection{Synopsis}
-\textbf{cd} [\ul{DEST}]
-\subsection{Description}
-Change de répertoire (par defaut \emph{home})
-
-\section{cp}
-\subsection{Synopsis}
-\textbf{cp} [\ul{OPTION}]... \ul{SOURCE}... \ul{DIRECTORY}|\ul{FILE}
-\subsection{Description}
-Copie fichiers et répertoires
-\subsection{Options}
-\begin{description}
-\item[-r :] récursivement
-\end{description}
-
-\section{mv}
-\subsection{Synopsis}
-\textbf{mv} [\ul{OPTION}]... \ul{SOURCE}... \ul{DIRECTORY}|\ul{FILE}
-\subsection{Description}
-Déplace (et renomme) des fichiers et répertoires
-\subsection{Options}
-
-\section{mkdir}
-\subsection{Synopsis}
-\textbf{mkdir} [\ul{OPTION}]... \ul{DIRECTORY}...
-\subsection{Description}
-Crée des répertoires
-\subsection{Options}
-\begin{description}
-\item[-p :] crée les répertoires parents si inexistants
-\end{description}
-
-\section{rmdir}
-\subsection{Synopsis}
-\textbf{rmdir} [\ul{OPTION}]... \ul{DIRECTORY}...
-\subsection{Description}
-Supprime des répertoires (vides)
-\subsection{Options}
-
-\section{touch}
-\subsection{Synopsis}
-\textbf{touch} [\ul{OPTION}]... \ul{FILE}...
-\subsection{Description}
-Met à jour la date de dernère modification des fichiers (les fichiers sont créé s'ils n'existent pas)
-\subsection{Options}
-
-\section{rm}
-\subsection{Synopsis}
-\textbf{rm} [\ul{OPTION}]... \ul{FILE}...
-\subsection{Description}
-Supprime des fichiers
-\subsection{Options}
-\begin{description}
-\item[-r :] récursivement
-\end{description}
-
-
-
--------------------------------------------------------------------------------------------
-
+	\chapter{System}
+		\section{ls}
+			\subsection{Synopsis}
+				\textbf{ls} [\ul{OPTION}]... [\ul{FILE}]...
+			\subsection{Description}
+				Liste le contenu d'un répertoire (par ordre alphabétique par défaut)
+			\subsection{Options}
+				\begin{description}
+				\item[-a :] affiche également les fichiers cachés
+				\item[-F :] affiche les dossiers avec un « / » a la fin et les raccourcis avec un « @ » a la fin
+				\item[-d :] n'affiche pas le contenu des sous-répertoires
+				\item[-h :] affiche les tailles d’une manière plus lisible pour l’humain
+				\item[-t :] trie par date de dernière modification
+				\item[-t :] affiche sous forme de liste détaillée
+				\item[-r :] inverse l'ordre d'affichage
+				\item[-i :] affiche l’inode de chaque fichiers
+				\end{description}
+		\section{cd}
+			\subsection{Synopsis}
+				\textbf{cd} [\ul{DEST}]
+			\subsection{Description}
+				Change de répertoire (par defaut \emph{home})
+			\subsection{Options}
+		\section{cp}
+			\subsection{Synopsis}
+				\textbf{cp} [\ul{OPTION}]... \ul{SOURCE}... \ul{DIRECTORY}|\ul{FILE}
+			\subsection{Description}
+				Copie fichiers et répertoires
+			\subsection{Options}
+				\begin{description}
+				\item[-r :] récursivement
+				\end{description}
+		\section{mv}
+			\subsection{Synopsis}
+				\textbf{mv} [\ul{OPTION}]... \ul{SOURCE}... \ul{DIRECTORY}|\ul{FILE}
+			\subsection{Description}
+				Déplace (et renomme) des fichiers et répertoires
+			\subsection{Options}
+		\section{mkdir}
+			\subsection{Synopsis}
+				\textbf{mkdir} [\ul{OPTION}]... \ul{DIRECTORY}...
+			\subsection{Description}
+				Crée des répertoires
+			\subsection{Options}
+				\begin{description}
+				\item[-p :] crée les répertoires parents si inexistants
+				\end{description}
+		\section{rmdir}
+			\subsection{Synopsis}
+				\textbf{rmdir} [\ul{OPTION}]... \ul{DIRECTORY}...
+			\subsection{Description}
+				Supprime des répertoires (vides)
+			\subsection{Options}
+		\section{touch}
+			\subsection{Synopsis}
+				\textbf{touch} [\ul{OPTION}]... \ul{FILE}...
+			\subsection{Description}
+				Met à jour la date de dernère modification des fichiers (les fichiers sont créé s'ils n'existent pas)
+			\subsection{Options}
+		\section{rm}
+			\subsection{Synopsis}
+				\textbf{rm} [\ul{OPTION}]... \ul{FILE}...
+			\subsection{Description}
+				Supprime des fichiers
+			\subsection{Options}
+				\begin{description}
+				\item[-r :] récursivement
+				\end{description}
+		\section{date}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{history}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{printenv}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{pwd}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{du}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{cat}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{less}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{head}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{tail}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{ln}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{whereis}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{which}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{find}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{locate}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{whoami}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{uname}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{su}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{umask}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{chmod}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+	\chapter{Administration}
+		\section{id}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{useradd}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{passwd}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+		\section{usermod}
+			\subsection{Synopsis}
+			\subsection{Description}
+			\subsection{Options}
+	\chapter{Network}
+\part{Keyboard Shortcuts}
+	\begin{center}
+		\begin{tabular}{|l|l|}
+			\hline
+			\begin{bf}Keyboard Shortcut\end{bf} & \begin{bf}Description\end{bf} \\
+			\hline
+			TAB & Auto completion \\
+			TAB + TAB & List auto-completion possibilities \\
+			ARROW UP & Previous command \\
+			ARROW DOWN & Next command \\
+			CTRL + R & Reverse index search \\
+			CTRL + L & Clear \\
+			CTRL + D & End Of File \\
+			SHIFT + PgUp & Go up in the console messages \\
+			SHIFT + PgDown & Go down in the console messages \\
+			CTRL + A $\vert$ HOME & Bring the cursor to the extreme left \\
+			CTRL + E $\vert$ END & Bring the cursor to the extreme right \\
+			CTRL + U & Delete everyhing to the left of the cursor \\
+			CTRL + K & Delete everyhing to the right of the cursor \\
+			CTRL + W & Delete the fisrt word to the left of the cursor \\
+			CTRL + Y & Past a word deleted with CTRL+U $\vert$ CTRL+K $\vert$ CTRL+W \\
+			CTRL + C & Kill a runnig proscessus \\
+			CTRL + Z & Stop a runnig proscessus \\
+			\hline
+		\end{tabular}
+	\end{center}
 
 
     1. date : renvoie la date et l’heure
@@ -683,40 +790,11 @@ waitpid
 
 execl, execlp, execv, execvp, ...
 
+telnet
+
 
 
 -------------------------------------------------------------------------------------------
 
-\chapter{Administration}
-
-\chapter{Network}
-
-\part{Keyboard Shortcuts}
-
-\begin{center}
-\begin{tabular}{|l|l|}
-\hline
-\begin{bf}Keyboard Shortcut\end{bf} & \begin{bf}Description\end{bf} \\
-\hline
-TAB & Auto completion \\
-TAB + TAB & List auto-completion possibilities \\
-ARROW UP & Previous command \\
-ARROW DOWN & Next command \\
-CTRL + R & Reverse index search \\
-CTRL + L & Clear \\
-CTRL + D & End Of File \\
-SHIFT + PgUp & Go up in the console messages \\
-SHIFT + PgDown & Go down in the console messages \\
-CTRL + A $\vert$ HOME & Bring the cursor to the extreme left \\
-CTRL + E $\vert$ END & Bring the cursor to the extreme right \\
-CTRL + U & Delete everyhing to the left of the cursor \\
-CTRL + K & Delete everyhing to the right of the cursor \\
-CTRL + W & Delete the fisrt word to the left of the cursor \\
-CTRL + Y & Past a word deleted with CTRL+U $\vert$ CTRL+K $\vert$ CTRL+W \\
-CTRL + C & Kill a runnig proscessus \\
-CTRL + Z & Stop a runnig proscessus \\
-\hline
-\end{tabular}
-\end{center}
 
 \end{document}
